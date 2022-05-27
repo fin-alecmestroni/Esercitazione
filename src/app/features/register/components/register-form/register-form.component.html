@@ -1,0 +1,29 @@
+<!--Form di login in ngForm da ricordare bene i campi "name", utilizzati da TypeScript-->
+
+<div class="centered">
+    <h1>Became a part of our Family!</h1>
+    <p>Register Now</p>
+</div>
+<form #credentialForm="ngForm" (submit)="assignCredential(credentialForm)">
+    <div class="centered">
+        <label> Nome </label><br />
+        <input type="string" name="name" #refEmail="ngModel" [ngModel]="formName" required /><br />
+    </div>
+    <div class="centered">
+        <label> Email </label><br />
+        <input type="mail" name="mail" #refEmail="ngModel" [ngModel]="formMail" required /><br />
+    </div>
+    <div class="centered">
+        <label> Password </label><br />
+        <input type="password" name="password" #refPassword="ngModel" [ngModel]="formPassword" required /><br />
+    </div>
+    <div class="centered">
+        <label> Password Check </label><br />
+        <input type="password" name="password" #refEmail="ngModel" [ngModel]="formPasswordCheck" required /><br />
+    </div>
+    <div class="centered">
+        <input class="login-button" type="submit" value="Accedi" /><br />
+        <small class="error-msg" *ngIf="userAlredyExistForm">La mail selezionata e' gia' in uso</small>
+        <br />
+    </div>
+</form>

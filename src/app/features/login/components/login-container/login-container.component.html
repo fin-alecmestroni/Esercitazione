@@ -1,1 +1,10 @@
-<p>login-container works!</p>
+<!-- Dichiaro il PlaceHolder del figlio all'interno dell'HTML del padre. 
+    al cui interno gestisco in modo dinamico da figlio a padre l'evento del trasferimento 
+    delle credenziali e viceversa per la gestione della variabile dell'errore -->
+
+<div class="centered">
+    <h1>Welcome Back</h1>
+    <p>Insert your credentials</p>
+</div>
+<fin-login-form (credentialTransferEvent)="loginHandler($event)" [credentialAreIncorrectForm]=credentialAreIncorrect>
+</fin-login-form>

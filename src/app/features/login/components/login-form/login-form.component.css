@@ -1,0 +1,23 @@
+.error-msg {
+    color: red;
+}
+
+.centered {
+    font-size: large;
+    text-align: center;
+    margin-top: 1%;
+}
+
+.login-button {
+    margin-top: 2%;
+    width: 6vw;
+    font-size: large;
+    text-align: center;
+}
+
+input {
+    text-align: center;
+    width: 12vw;
+    margin-top: 1vh;
+}
+

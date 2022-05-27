@@ -1,7 +1,8 @@
-export interface TodoText {
+export interface TodoModel {
     id: number,
+    id_user: number,
     text: string,
     status: string,
-    createAt: date,
-    dueDate: date
+    createAt: Date,
+    dueDate: Date
 }

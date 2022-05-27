@@ -1,1 +1,18 @@
-<p>login-form works!</p>
+<!--Form di login in ngForm da ricordare bene i campi "name", utilizzati da TypeScript-->
+
+
+<form #credentialForm="ngForm" (submit)="assignCredential(credentialForm)">
+    <div class="centered">
+        <label> Email </label><br />
+        <input type="mail" name="mail" #refEmail="ngModel" [ngModel]="formMail" required /><br />
+    </div>
+    <div class="centered">
+        <label> Password </label><br />
+        <input type="password" name="password" #refPassword="ngModel" [ngModel]="formPassword" required /><br />
+    </div>
+    <div class="centered">
+        <input class="login-button" type="submit" value="Accedi" /><br />
+        <small class="error-msg" *ngIf="credentialAreIncorrectForm">La mail selezionata e' gia' in uso</small>
+        <br />
+    </div>
+</form>

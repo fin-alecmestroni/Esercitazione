@@ -1,0 +1,6 @@
+<div class="toolbar" role="banner">
+    <button *ngFor="let tab of navbarTabs" (click)=" navbarClickHandler(tab)"> {{tab}} </button>
+    <div class="logout-button" (click)="logOut()">
+        Logout
+    </div>
+</div>

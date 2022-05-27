@@ -1,0 +1,9 @@
+<!-- Dichiaro il PlaceHolder del figlio all'interno dell'HTML del padre. 
+    al cui interno gestisco in modo dinamico da figlio a padre l'evento del trasferimento 
+    delle credenziali e viceversa per la gestione della variabile dell'errore -->
+
+    <fin-register-form 
+    (credentialTransferEvent)="registrationHandler($event)" 
+    [userAlredyExistForm] = userAlreadyExist
+    >
+</fin-register-form>
